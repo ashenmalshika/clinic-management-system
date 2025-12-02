@@ -1,0 +1,8 @@
+/* assets/css/styles.css */
+body { padding-bottom: 50px; }
+.navbar-brand { font-weight: 600; }
+.container { max-width: 1100px; }
+.card .form-control { margin-bottom: .5rem; }
+.hidden { display: none !important; }
+.table td, .table th { vertical-align: middle; }
+.small-muted { font-size: .9rem; color: #666; }

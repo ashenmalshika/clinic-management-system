@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Portal | HealthCare System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        /* Navbar */
+        .navbar {
+            padding: 1.2rem 2rem;
+            /*background: transparent;*/
+            background-color: #007bff;
+        }
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color:#fff;
+        }
+        .nav-link {
+            color: #fff !important;
+            margin-right: 1.5rem;
+        }
+        .nav-link:hover {
+            color: #0c0c0c !important;
+        }
+        .hero {
+            background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.1rem;
+        }
+        .info-section {
+            padding: 60px 20px;
+        }
+        .info-section h2 {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #224abe;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar"></div>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to the Patient Portal</h1>
+        <p>Manage your medical records, view doctor appointments, and get personalized care — all in one place.</p>
+        <a href="/patientRegister.html" class="btn btn-light btn-lg mt-3">Register as a Patient</a>
+    </div>
+</section>
+
+<!-- Information Section -->
+<section class="info-section">
+    <div class="container">
+        <h2>Our Patient Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card p-4 text-center shadow-sm">
+                    <h5 class="fw-bold text-primary mb-3">🩹 Medical Records</h5>
+                    <p>Easily access your health records, prescriptions, and past diagnoses securely through your account.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 text-center shadow-sm">
+                    <h5 class="fw-bold text-primary mb-3">📅 Appointment Booking</h5>
+                    <p>Book appointments with doctors, check available slots, and get reminders for your upcoming visits.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 text-center shadow-sm">
+                    <h5 class="fw-bold text-primary mb-3">💊 Treatment History</h5>
+                    <p>Track your treatments, follow your recovery progress, and stay updated on prescribed medications.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+            <div class="col-md-4">
+                <div class="card p-4 text-center shadow-sm">
+                    <h5 class="fw-bold text-primary mb-3">👨‍⚕️ Assigned Doctors</h5>
+                    <p>View details of your assigned doctors and specialists for each of your ongoing treatments.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 text-center shadow-sm">
+                    <h5 class="fw-bold text-primary mb-3">🔔 Health Alerts</h5>
+                    <p>Get real-time notifications on your reports, doctor recommendations, and health updates.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 text-center shadow-sm">
+                    <h5 class="fw-bold text-primary mb-3">🧠 Wellness Tips</h5>
+                    <p>Receive personalized health and wellness tips based on your medical history and lifestyle.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="patientRegister.html" class="btn btn-primary btn-lg px-5">Go to Registration</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 HealthCare Management System | Designed for Patients</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/navbar.js"></script>
+</body>
+</html>

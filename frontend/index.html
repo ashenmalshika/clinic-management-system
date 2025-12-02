@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #111;
+        }
+
+        /* Navbar */
+        .navbar {
+            padding: 1.2rem 2rem;
+            /*background: transparent;*/
+            background-color: #007bff;
+        }
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.3rem;
+            color:#fff;
+        }
+        .nav-link {
+            color: #fff !important;
+            margin-right: 1.5rem;
+        }
+        .nav-link:hover {
+            color: #0c0c0c !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px 80px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .hero .btn-main {
+            background-color: #111;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .hero .btn-main:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* Feature cards */
+        .features {
+            margin-top: 60px;
+        }
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: #fafafa;
+            transition: 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-5px);
+        }
+        .feature-card img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        .feature-card h5 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            color: #777;
+            font-size: 0.95rem;
+        }
+
+        /* Partners section */
+        .partners {
+            background-color: #fff;
+            padding: 40px 0;
+        }
+        .partners img {
+            height: 40px;
+            margin: 0 20px;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+        .partners img:hover {
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h5 class="text-uppercase text-secondary mb-3">Healthcare Integration</h5>
+    <h1>The Essential Platform That Helps <br> Connect Doctors and Patients</h1>
+    <p>A modern system delivering fast, efficient, and personalized healthcare management experiences — for hospitals, clinics, and patients.</p>
+    <a href="/patientRegister.html" class="btn btn-main">Get Started — It’s Free</a>
+
+    <div class="row justify-content-center features mt-5">
+        <div class="col-md-2 m-2 feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2920/2920243.png" alt="Doctor">
+            <h5>Doctor Portal</h5>
+            <p>Manage schedules, appointments, and patient data effortlessly.</p>
+        </div>
+        <div class="col-md-2 m-2 feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="Patient">
+            <h5>Patient Records</h5>
+            <p>Maintain complete patient history with secure access.</p>
+        </div>
+        <div class="col-md-2 m-2 feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Appointments">
+            <h5>Appointments</h5>
+            <p>Book, track, and manage clinic visits efficiently.</p>
+        </div>
+        <div class="col-md-2 m-2 feature-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2332/2332384.png" alt="Billing">
+            <h5>Billing System</h5>
+            <p>Generate invoices and track payments automatically.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Partners -->
+<section class="partners text-center">
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/NCR_Corporation_logo.svg" alt="NCR">
+        <img src="https://1000logos.net/wp-content/uploads/2021/05/Philips-logo.png" alt="Philips">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Dropbox_logo_2017.svg" alt="Dropbox">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Upwork_Logo.svg" alt="Upwork">
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2025 ClinicCare. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('loginBtn').addEventListener('click', () => {
+        window.location.href = 'login.html';
+    });
+</script>
+<script src="assets/js/navbar.js"></script>
+</body>
+</html>
