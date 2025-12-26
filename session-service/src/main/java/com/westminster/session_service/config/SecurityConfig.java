@@ -24,9 +24,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // Public URLs
                         .requestMatchers( "/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                        .requestMatchers("/api/v1/sessions/doctor/**").hasAuthority("ROLE_PATIENT")
                         // Patient APIs (optional, for extra safety)
-                        .requestMatchers("/api/v1/sessions/**","/session/**").hasAnyAuthority("ROLE_ADMIN","ROLE_DOCTOR","ROLE_RECEPTIONIST")
+                        .requestMatchers("/api/v1/sessions/**","/session/**").hasAnyAuthority("ROLE_ADMIN","ROLE_DOCTOR","ROLE_RECEPTIONIST","ROLE_PATIENT")
 
                         // Any other request must be authenticated
                         .anyRequest().authenticated()

@@ -1,7 +1,9 @@
 package com.westminster.appointment_service.service;
 
+import com.westminster.appointment_service.client.SessionClient;
 import com.westminster.appointment_service.model.Appointment;
 import com.westminster.appointment_service.repository.AppointmentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,8 +13,21 @@ public class AppointmentService {
 
     private final AppointmentRepository repo;
 
+    @Autowired
+    private SessionClient sessionClient;
+
     public AppointmentService(AppointmentRepository repo) {
         this.repo = repo;
+    }
+    public Appointment create(Appointment dto) {
+
+        boolean allowed = sessionClient.reserve(dto.getSessionId()).get("allowed");
+
+        if (!allowed) {
+            throw new IllegalStateException("Session is full");
+        }
+
+        return repo.save(dto);
     }
 
     public Appointment save(Appointment a) {

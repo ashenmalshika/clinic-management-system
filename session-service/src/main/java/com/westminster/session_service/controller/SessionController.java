@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/sessions")
@@ -20,6 +21,13 @@ public class SessionController {
 
     public SessionController(SessionService sessionService) {
         this.sessionService = sessionService;
+    }
+    @PostMapping("/{id}/reserve")
+    public Map<String, Boolean> reserve(@PathVariable Long id) {
+        System.out.println("***1");
+        boolean allowed = sessionService.reserveSeat(id);
+
+        return Map.of("allowed", allowed);
     }
 
     @PostMapping("/create")

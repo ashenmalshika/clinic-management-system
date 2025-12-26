@@ -28,6 +28,8 @@ public class Session {
     @Column(name = "max_patients", nullable = false)
     private int maxPatients;
 
+    @Column(name = "current_patients", nullable = false)
+    private int currentPatients;
 
     // Getters & Setters
 }

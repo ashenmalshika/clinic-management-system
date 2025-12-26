@@ -2,6 +2,7 @@ package com.westminster.session_service.service;
 
 import com.westminster.session_service.model.Session;
 import com.westminster.session_service.repository.SessionRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,21 @@ public class SessionServiceImpl implements SessionService {
 
     public SessionServiceImpl(SessionRepository sessionRepository) {
         this.sessionRepository = sessionRepository;
+    }
+    @Transactional
+    public boolean reserveSeat(Long sessionId) {
+
+        Session s = sessionRepository.findByIdForUpdate(sessionId)
+                .orElseThrow(() -> new RuntimeException("Session not found"));
+
+        if (s.getCurrentPatients() >= s.getMaxPatients()) {
+            return false;
+        }
+
+        s.setCurrentPatients(s.getCurrentPatients() + 1);
+        sessionRepository.save(s);
+
+        return true;
     }
 
     @Override

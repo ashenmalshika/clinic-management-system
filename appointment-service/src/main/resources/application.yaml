@@ -19,3 +19,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
+
+logging:
+  level:
+    com.westminster.appointment_service.client.SessionClient: DEBUG
+    org.springframework.web.client: DEBUG

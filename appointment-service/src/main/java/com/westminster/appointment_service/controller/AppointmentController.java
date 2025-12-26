@@ -2,6 +2,7 @@ package com.westminster.appointment_service.controller;
 
 import com.westminster.appointment_service.model.Appointment;
 import com.westminster.appointment_service.service.AppointmentService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,9 +25,12 @@ public class AppointmentController {
     }
 
     @PostMapping("/create")
-    @PreAuthorize("hasAnyRole('ADMIN','PATIENT')")
-    public Appointment create(@RequestBody Appointment appointment) {
-        return service.save(appointment);
+    public ResponseEntity<?> create(@RequestBody Appointment dto) {
+        try {
+            return ResponseEntity.ok(service.create(dto));
+        } catch (IllegalStateException e) {
+            return ResponseEntity.status(409).body(e.getMessage());
+        }
     }
 
     @GetMapping("/doctor/{id}")
